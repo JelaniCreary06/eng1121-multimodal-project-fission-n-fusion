@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuclear Energy Quiz</title>
+  <link rel="stylesheet" href="src/style/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="essay-link-container">
+      <button id="essay-button" onclick="window.open('https://docs.google.com/document/d/1uGzzdk7EaCwxqb4b3AKmD7adul3c3xHu3JpDGp9JyjY/edit?usp=sharing', '_blank')">
+        Fusing Atoms or Splitting Stars
+      </button>
+    </div>
+
+    <div id="start-screen">
+      <h1 id="quiz-title">Nuclear Energy Quiz</h1>
+      <button onclick="startGame()">Start Quiz</button>
+      
+      <div id="difficulty-selection">
+        <label>
+          <input id="easy" type="checkbox" name="difficulty" value="easy"> Easy Questions
+        </label>
+        <label>
+          <input id="medium" type="checkbox" name="difficulty" value="medium"> Medium Questions
+        </label>
+        <label>
+          <input id="hard" type="checkbox" name="difficulty" value="hard"> Hard Questions
+        </label>
+      </div>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+      <h2 id="question-title"></h2>
+      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="question-box">
+        <div class="choices" id="choices"></div>
+        <p id="feedback"></p>
+        <div id="explanation" class="fact-box hidden"></div>
+      </div>
+
+      <p>Score: <span id="score">0</span> | Question <span id="current">1</span> of <span id="total"></span></p>
+      <button onclick="nextQuestion()">Next</button>
+      <button id="restart-button" style="display: none;">🔄 Restart</button>
+    </div>
+
+    <div id="end-screen" class="hidden">
+      <h2>Quiz Completed!</h2>
+      <p id="final-score"></p>
+      <button onclick="restartQuiz()">Play Again</button>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_eb5e84584b.mp3"></audio>
+  <audio id="wrong-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_bf1715b056.mp3"></audio>
+
+  <script src="src/scripts/questions.js"></script>
+  <script src="src/scripts/script.js"></script>
+
+</body>
+</html>
