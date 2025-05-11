@@ -69,14 +69,16 @@ function checkAnswer(selectedDisplayIndex) {
 function nextQuestion() {
   currentQuestion++;
   if (currentQuestion < questions.length) showQuestion();
-  else endQuiz();
+  else showSummary();
   
 }
 
-function endQuiz() {
-  document.getElementById("quiz-screen").classList.add("hidden");
-  document.getElementById("end-screen").classList.remove("hidden");
-  document.getElementById("final-score").innerText = `Your score is ${score}/${questions.length}`;
+function showSummary() {
+  document.getElementById('total-questions').textContent = questions.length;
+  document.getElementById('correct-answers').textContent = score;
+  document.getElementById('final-score').textContent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('quiz-screen').classList.add('hidden');
+  document.getElementById('end-screen').classList.remove('hidden');
 }
 
 function restartQuiz() {
@@ -92,3 +94,7 @@ document.getElementById("restart-button").addEventListener("click", () => {
   document.getElementById("restart-button").style.display = "none";
   restartQuiz();
 });
+
+document.getElementById("summary-button").addEventListener("click", () => {
+  showSummary();
+})

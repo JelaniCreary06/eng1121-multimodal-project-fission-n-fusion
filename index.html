@@ -43,12 +43,15 @@
 
       <p>Score: <span id="score">0</span> | Question <span id="current">1</span> of <span id="total"></span></p>
       <button onclick="nextQuestion()">Next</button>
-      <button id="restart-button" style="display: none;">🔄 Restart</button>
+      <button id="restart-button" >🔄 Restart</button>
+      <button id="summary-button"> Summary</button>
     </div>
 
     <div id="end-screen" class="hidden">
       <h2>Quiz Completed!</h2>
-      <p id="final-score"></p>
+      <p>Total Questions: <span id="total-questions"></span></p>
+      <p>Correct Answers: <span id="correct-answers"></span></p>
+      <p>Score: <span id="final-score"></span>%</p>
       <button onclick="restartQuiz()">Play Again</button>
     </div>
   </div>
