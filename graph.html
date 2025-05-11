@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interactive Fusion Graph</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -76,9 +76,9 @@
   <h1>Interactive Fusion Graph</h1>
 
   <div class="input-group">
-    <label for="massSlider">Fuel Mass (kg):</label>
+    <label for="mass-slider">Fuel Mass (kg):</label>
     <input type="range" id="mass-slider" min="0.001" max="1.0" step="0.001" value="0.01" oninput="syncMassInput(this.value)">
-    <input type="number" id="massinput" min="0.001" max="1.0" step="0.001" value="0.01" onchange="syncMassSlider(this.value)">
+    <input type="number" id="mass-input" min="0.001" max="1.0" step="0.001" value="0.01" onchange="syncMassSlider(this.value)">
   </div>
 
   <div class="input-group">
