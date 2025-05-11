@@ -1,5 +1,145 @@
 let allQuestions = [
   {
+    q: "What is the Lawson Criterion used for in nuclear fusion?",
+    a: ["Measuring radioactive decay", "Determining fusion reactor size", "Assessing fusion conditions for energy gain", "Calculating mass defect"],
+    c: 2,
+    exp: "The Lawson Criterion sets the conditions (density, temperature, and confinement time) needed for a fusion reactor to produce more energy than it consumes.",
+    difficulty: "hard"
+  },
+  {
+    q: "What is 'ignition' in the context of nuclear fusion?",
+    a: ["Start of fission reaction", "Initiation of cooling", "Self-sustaining fusion reaction", "Shutdown of fusion device"],
+    c: 2,
+    exp: "Ignition refers to the point where a fusion reaction becomes self-sustaining without further external energy input.",
+    difficulty: "hard"
+  },
+  {
+    q: "What is the major engineering challenge with magnetic confinement fusion?",
+    a: ["Material corrosion", "Creating vacuum", "Maintaining plasma stability", "High radiation damage"],
+    c: 2,
+    exp: "Plasma instability and containment are major hurdles in magnetic confinement fusion devices like tokamaks.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which fusion fuel cycle produces the least neutron radiation?",
+    a: ["Deuterium-Tritium", "Deuterium-Deuterium", "Deuterium-Helium-3", "Tritium-Tritium"],
+    c: 2,
+    exp: "The deuterium–helium-3 reaction produces fewer neutrons, making it a cleaner fusion fuel cycle.",
+    difficulty: "hard"
+  },
+  {
+    q: "What does a breeder reactor do?",
+    a: ["Burns waste fuel", "Generates tritium", "Creates more fissile material than it consumes", "Uses fusion to breed deuterium"],
+    c: 2,
+    exp: "Breeder reactors produce more fissile fuel (like plutonium-239 or uranium-233) than they consume.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which isotope can be bred from thorium-232?",
+    a: ["Uranium-233", "Plutonium-239", "Tritium", "Deuterium"],
+    c: 0,
+    exp: "Thorium-232 absorbs a neutron and eventually becomes uranium-233, a fissile material.",
+    difficulty: "hard"
+  },
+  {
+    q: "What is the approximate Q value of the D-T fusion reaction?",
+    a: ["1.6 MeV", "17.6 MeV", "0.5 MeV", "24 MeV"],
+    c: 1,
+    exp: "The deuterium-tritium fusion reaction releases about 17.6 MeV of energy.",
+    difficulty: "hard"
+  },
+  {
+    q: "Why is tritium challenging to use as a fuel?",
+    a: ["It is too common", "It is highly reactive with water", "It is radioactive and must be bred on-site", "It doesn’t react at fusion temperatures"],
+    c: 2,
+    exp: "Tritium is radioactive with a short half-life and must be generated in reactors, often via lithium breeding.",
+    difficulty: "hard"
+  },
+  {
+    q: "What does a tokamak use to confine plasma?",
+    a: ["Electric fields", "Magnetic mirrors", "Gravitational forces", "Strong magnetic fields in a toroidal shape"],
+    c: 3,
+    exp: "Tokamaks use toroidal magnetic fields to keep plasma stable and confined.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which part of a fusion reactor is most vulnerable to neutron damage?",
+    a: ["Vacuum chamber", "Divertor", "First wall", "Cryostat"],
+    c: 2,
+    exp: "The first wall, which faces the plasma directly, receives intense neutron bombardment and must be very durable.",
+    difficulty: "hard"
+  },
+  {
+    q: "In the fission of uranium-235, what is the average number of neutrons released?",
+    a: ["1", "2", "2.5", "3.5"],
+    c: 2,
+    exp: "On average, about 2.5 neutrons are released per fission of a uranium-235 nucleus.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which material is often used as a neutron moderator in fission reactors?",
+    a: ["Boron", "Lead", "Graphite", "Steel"],
+    c: 2,
+    exp: "Graphite slows down neutrons, allowing better absorption by fissile nuclei like uranium-235.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which reactor type is most commonly used in commercial nuclear power plants?",
+    a: ["Fast breeder reactor", "Molten salt reactor", "Pressurized water reactor", "Fusion tokamak"],
+    c: 2,
+    exp: "Pressurized water reactors (PWRs) are the most widely used commercial fission reactors.",
+    difficulty: "hard"
+  },
+  {
+    q: "What is the primary coolant in a typical pressurized water reactor?",
+    a: ["Liquid sodium", "Heavy water", "Light water", "Helium gas"],
+    c: 2,
+    exp: "Light (normal) water serves as both the coolant and moderator in most PWRs.",
+    difficulty: "hard"
+  },
+  {
+    q: "Why is heavy water used in some reactors?",
+    a: ["It boils at lower temperature", "It increases neutron production", "It allows use of natural uranium", "It cools faster"],
+    c: 2,
+    exp: "Heavy water allows reactors to use unenriched natural uranium by being an efficient moderator with low neutron absorption.",
+    difficulty: "hard"
+  },
+  {
+    q: "What fusion fuel is scarce on Earth but more abundant on the Moon?",
+    a: ["Tritium", "Deuterium", "Helium-3", "Lithium-6"],
+    c: 2,
+    exp: "Helium-3 is rare on Earth but may be mined on the Moon for future fusion applications.",
+    difficulty: "hard"
+  },
+  {
+    q: "What does the term 'burn-up' measure in nuclear fuel?",
+    a: ["Temperature increase", "Neutron flux", "Energy extracted per mass of fuel", "Radiation dose"],
+    c: 2,
+    exp: "Burn-up is a measure of how much energy has been extracted from a given mass of nuclear fuel.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which structure is designed to contain radiation during a meltdown?",
+    a: ["Reactor core", "Containment building", "Cooling tower", "Fuel rod"],
+    c: 1,
+    exp: "The containment building is a robust structure built to prevent the release of radioactive materials.",
+    difficulty: "hard"
+  },
+  {
+    q: "Which nuclear process leads to energy release due to mass defect?",
+    a: ["Fusion only", "Fission only", "Both fission and fusion", "Radioactive decay"],
+    c: 2,
+    exp: "Both fission and fusion release energy because the total mass of products is less than the reactants.",
+    difficulty: "hard"
+  },
+  {
+    q: "What is the function of the divertor in a fusion reactor?",
+    a: ["Ignite the plasma", "Monitor neutron flux", "Extract helium ash and heat", "Support magnetic fields"],
+    c: 2,
+    exp: "The divertor removes waste particles like helium 'ash' and helps manage heat loads in the plasma chamber.",
+    difficulty: "hard"
+  },//set 9
+  {
     q: "What is the primary byproduct of nuclear fusion involving hydrogen isotopes?",
     a: ["Carbon dioxide", "Helium", "Uranium", "Plutonium"],
     c: 1,
