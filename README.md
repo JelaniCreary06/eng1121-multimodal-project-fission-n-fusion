@@ -32,7 +32,7 @@ All quiz questions were also double checked for accuracy.
 
 ## 📄 License
 
-This project is for educational use only.
+This project was created and is intended for educational use, anyone is free to use the code. Reminder that this is not a professional resume project, and should not be treated as one.
 
 ## Setup
 
