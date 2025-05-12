@@ -1,6 +1,6 @@
-# Nuclear Fusion & Fission Quiz
+# Nuclear Fusion & Fission Multimodal Project
 
-An interactive nuclear energy quiz with the purpose of being educational. Created for my English 1121 multimodal project. Hosted on GitHub Pages.
+An interactive nuclear energy website with the purpose of being educational. Created for my English 1121 multimodal project. Hosted on GitHub Pages.
 
 ## 🚀 Live Demo
 
@@ -8,14 +8,19 @@ An interactive nuclear energy quiz with the purpose of being educational. Create
 
 ## Features
 
-- ✅ Multiple difficulty levels (Easy, Medium, Hard)
-- 🧠 Informational cards for deeper understanding
+- 🧠 Multiple-choice quiz with **Easy**, **Medium**, and **Hard** questions
+- ✅ Score tracking and end-of-quiz **summary page**
+- 📊 **Interactive energy output graph** using Chart.js
+- ⚡ **Fusion energy calculator** using E = mc²
+- 🎶 Continuous **background music** using `localStorage` to remember playback
+- 💬 Optional live Q&A, sticky navbar, and visual polish
 
 ## Technologies
 
-- HTML
-- CSS
-- JavaScript
+- HTML, CSS, JavaScript
+- Chart.js for graphs
+- LocalStorage for state persistence
+- Hosted on GitHub Pages
 
 ## Attribution
 
@@ -24,6 +29,10 @@ Note this is NOT a professional resume project.
 The quiz questions, HTML, and CSS were generated with the help of [ChatGPT](https://openai.com/chatgpt) by OpenAI.
 The javascript functions were all created, and designed by me (i'm not confident in front-end so I stick to back-end).
 All quiz questions were also double checked for accuracy.
+
+## 📄 License
+
+This project is for educational use only.
 
 ## Setup
 
