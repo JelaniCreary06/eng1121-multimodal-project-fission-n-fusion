@@ -59,13 +59,17 @@
       <p>Score: <span id="final-score"></span>%</p>
       <button onclick="restartQuiz()">Play Again</button>
     </div>
+
+    <button id="music-toggle">🔇</button>
   </div>
 
   <audio id="correct-sound" src="src/style/assets/sonido-correcto-331225.mp3"></audio>
   <audio id="wrong-sound" src="src/style/assets/wrong-100536.mp3"></audio>
+  <audio id="music-player" src="src/style/assets/Morning-Routine-Lofi-Study-Music(chosic.com).mp3" loop></audio>
 
   <script src="src/scripts/questions.js"></script>
   <script src="src/scripts/quizScript.js"></script>
+  <script src="src/scripts/musicHandler.js"></script>
 
 </body>
 </html>
