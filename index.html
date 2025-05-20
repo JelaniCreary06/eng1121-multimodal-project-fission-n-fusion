@@ -38,6 +38,48 @@
     .nav-button:hover {
       background-color: #00b89c;
     }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #142f44;
+      padding: 2rem;
+      border-radius: 10px;
+      color: white;
+      max-width: 600px;
+      max-height: 80%;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .modal-content h2 {
+      color: #00d1b2;
+      margin-top: 0;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -46,12 +88,44 @@
     <p>Created for my English 1121 multimodal project. My topic was on nuclear fission vs fusion.</p>
 
     <div class="nav-buttons">
+      <button class="nav-button" onclick="openModal()">📝 Read Artist Statement</button>
       <a href="quiz.html"><button class="nav-button">🧠 Start Quiz</button></a>
       <a href="graph.html"><button class="nav-button">📊 Interactive Graph</button></a>
       <a href="qna.html"><button class="nav-button">💬 Simple Q&A</button></a>
       <a href="https://docs.google.com/document/d/1uGzzdk7EaCwxqb4b3AKmD7adul3c3xHu3JpDGp9JyjY/edit?usp=sharing"><button class="nav-button">📄 Fusing Atoms or Splitting Stars</button></a>
     </div>
   </div>
+
+  <div id="artist-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Artist Statement</h2>
+        <p>
+          This project was created for a general audience, with the purpose of helping people learn some quick information about nuclear energy to hopefully get them interested. The main point I'm trying to convey is that nuclear energy is useful and interesting, and will be essential in our future. Unlike other media which portray nuclear energy in a bad light, this project isn’t trying to sway anyones opinion and is meant to be hopefully a little fun and interesting. I understand that there is this deep distrust of nuclear energy because of events like Three Mile Island, Fukushima and Chernobyl. But to address the general audience I'd like to first state that no one died at Three Mile Island, the reactor meltdown went through the proper safety procedures and the incident was contained. The Fukushima tragedy was a result of natural disasters, as an earthquake and subsequent tsunami hit the power plant. Chernobyl however was the result of human error as the soviets skipped a lot of the steps and proper safety procedures while operating their reactor. I’d recommended watching the short video “Nuclear Power: why is it unpopular” from The Economist, and reading “Nuclear Energy’s Bottom Line” by Rogé Karma for more quick information about the negative perception of nuclear energy.
+          <br><br>
+          Like I stated before, this project is more informational than opinion based. I took inspiration from an interactive website we had saw on the New York times and tried my best to emulate that style. Included in the website is a quiz on nuclear energy. There are a variety of questions ranging in difficulty, and there’s no penalty for getting any wrong. If you do get an answer wrong, there’s a short explanation of the correct choice. I included this as I think it’ll help people be willing to try out the quiz and get questions wrong to learn from them. There’s also a fusion output graph section, where you can change the values to see how different efficiencies and fuel mass affect the output. Additionally there’s an . Lastly, I included a Q&A page, where you can ask a simple AI questions about nuclear energy, and it’ll respond accurately.
+          <br><br>
+          I decided this would be the best genre for my project as personally I also learn better while physically interacting with something. The goal isn’t to have people be completely invested in nuclear energy, but to walk away learning something new. As we face the growing demand for sustainable power, nuclear energy will be 100% used in our future. If people walk away with just one new fact or a shift in perspective from my project. Then I consider that a success.
+        </p>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("artist-modal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("artist-modal").classList.add("hidden");
+    }
+
+    window.addEventListener("click", function (e) {
+      const modal = document.getElementById("artist-modal");
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  </script>
 
   <button id="music-toggle">🔇</button>
   <audio id="music-player" src="src/style/assets/Morning-Routine-Lofi-Study-Music(chosic.com).mp3" loop></audio>
