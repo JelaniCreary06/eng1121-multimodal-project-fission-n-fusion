@@ -201,6 +201,16 @@ const faqResponses = [
     }
 ];
 
+const groupedKeywords = [];
+
+for (const answers of faqResponses) {
+    answers.keywords.forEach((k) => {
+        groupedKeywords.push(k);
+    });
+}
+
+console.log(groupedKeywords);
+
 function getAnswer() {
     const question = document.getElementById('user-question').value.toLowerCase();
     let response = "I'm not sure how to answer that. Try rephrasing or asking about nuclear fusion, fission, or safety.";
@@ -214,3 +224,30 @@ function getAnswer() {
 
     document.getElementById('answer').textContent = response;
 }
+
+function fillSuggestion(text) {
+    document.getElementById("user-question").value = text;
+    document.getElementById("user-question").focus();
+}
+
+function setSuggestion(element) {
+    const suggestion = Math.floor(Math.random() * (groupedKeywords.length + 1));
+    console.log(groupedKeywords[suggestion]);
+
+    element.textContent = "Ask about " + groupedKeywords[suggestion] + "?";
+    groupedKeywords.splice(suggestion, 1);
+}
+
+setSuggestion(document.getElementById('suggestion-one'));
+setSuggestion(document.getElementById('suggestion-two'));
+setSuggestion(document.getElementById('suggestion-three'));
+setSuggestion(document.getElementById('suggestion-four'));
+setSuggestion(document.getElementById('suggestion-five'));
+
+document.querySelectorAll('button').forEach((button) => {
+    if (button.className === "suggestion") {
+        button.addEventListener('click', (event) => {
+            fillSuggestion(event.target.textContent);
+        });
+    }
+});

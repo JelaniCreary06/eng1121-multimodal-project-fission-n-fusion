@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QNA</title>
   <link rel="stylesheet" href="src/style/style.css">
+  <style>
+    .suggestions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.suggestions button {
+  background-color: #142f44;
+  color: #00d1b2;
+  border: 1px solid #00d1b2;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestions button:hover {
+  background-color: #00d1b2;
+  color: black;
+}
+  </style>
 </head>
 
 <body>
@@ -24,9 +46,21 @@
     <p id="answer"></p>
   </div>
 
+  <div class="suggestions">
+    <p>Try asking:</p>
+    <button class="suggestion" id="suggestion-one">How does a nuclear reactor work?</button>
+    <button onclick="fillSuggestion('What is nuclear fusion?')">What is nuclear fusion?</button>
+    <button class="suggestion" id="suggestion-two">How does a nuclear reactor work?</button>
+    <button onclick="fillSuggestion('Why is nuclear energy controversial?')">Why is nuclear energy controversial?</button>
+    <button class="suggestion" id="suggestion-three">How does a nuclear reactor work?</button>
+    <button onclick="fillSuggestion('How does a nuclear reactor work?')">How does a nuclear reactor work?</button>
+    <button class="suggestion" id="suggestion-four">How does a nuclear reactor work?</button>
+    <button class="suggestion" id="suggestion-five">How does a nuclear reactor work?</button>
+  </div>
+
   <button id="music-toggle">🔇</button>
   <audio id="music-player" src="src/style/assets/Morning-Routine-Lofi-Study-Music(chosic.com).mp3" loop></audio>
-  
+
   <script src="src/scripts/qnaScript.js"></script>
   <script src="src/scripts/musicHandler.js"></script>
 </body>
