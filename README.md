@@ -4,16 +4,15 @@ An interactive nuclear energy website with the purpose of being educational. Cre
 
 ## 🚀 Live Demo
 
-[Click here to try the quiz!](https://jelanicreary06.github.io/eng1121-multimodal-project-fission-n-fusion/)
+[Click here to try the project!](https://jelanicreary06.github.io/eng1121-multimodal-project-fission-n-fusion/)
 
 ## Features
 
 - 🧠 Multiple-choice quiz with **Easy**, **Medium**, and **Hard** questions
 - ✅ Score tracking and end-of-quiz **summary page**
 - 📊 **Interactive energy output graph** using Chart.js
-- ⚡ **Fusion energy calculator** using E = mc²
 - 🎶 Continuous **background music** using `localStorage` to remember playback
-- 💬 Optional live Q&A, sticky navbar, and visual polish
+- 💬 Optional live Q&A with a simple response system, sticky navbar, and visual polish
 
 ## Technologies
 
